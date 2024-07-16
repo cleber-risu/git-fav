@@ -1,0 +1,210 @@
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-smoothing: grayscale;
+
+  --bg-color: #020A0D;
+
+  --txt-color: #E1E1E6;
+
+  --ip-bg-color: #06181C;
+
+  --bt-bg-color: #065E7C;
+  --bt-bg-color-hv: white;
+  --bt-txt-color: white;
+  --bt-txt-color-hv: var(--bt-bg-color);
+
+  --tb-border: #4A808C;
+  --tb-header-bg-color: #092D38;
+  --tb-row-even-bg-color: rgba(6, 22, 27, 0.5);
+  --tb-row-odd-bg-color: var(--ip-bg-color);
+
+  --bt-act-color: #F75A68;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+body, input, button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  color: var(--txt-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 112rem;
+  margin-inline: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* app */
+
+#app {
+  height: 100vh;
+  padding-block: 11.5rem;
+}
+
+/* header */
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+form input {
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--ip-bg-color);
+
+  width: 46rem;
+  height: 4.8rem;
+  padding: 1.6rem;
+}
+
+form button {
+  height: 4.8rem;
+  padding-inline: 3.2rem;
+
+  border: none;
+  border-radius: .5rem;
+  background-color: var(--bt-bg-color);
+
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: bold;
+  color: var(--bt-txt-color);
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+
+  transition: all 300ms;
+}
+
+form button:hover {
+  background-color: var(--bt-bg-color-hv);
+
+  color: var(--bt-txt-color-hv);
+}
+
+form button:hover svg path {
+  fill: var(--bt-txt-color-hv);
+}
+
+/* favorites table */
+
+table {
+  width: 100%;
+  max-height: 43rem;
+  margin-top: 8rem;
+
+  border-collapse: collapse;
+  border: .1rem solid var(--tb-border);
+
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 160%;
+}
+
+table tr td, table tr th {
+  padding: 1.6rem 4rem;
+  text-align: left;
+}
+
+table thead tr {
+  background-color: var(--tb-header-bg-color);
+}
+
+table tbody tr {
+  background-color: var(--tb-row-even-bg-color);
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: var(--tb-row-odd-bg-color);
+}
+
+.user {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.user img {
+  width: 5.6rem;
+  height: 5.6rem;
+
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.user a {
+  color: var(--txt-color);
+  line-height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .8rem;
+}
+
+.user a p {
+  font-weight: bold;
+}
+
+.user a span {
+  font-weight: 400;
+}
+
+.remove {
+  background: transparent;
+  border: none;
+
+  color: var(--bt-act-color);
+  font-size: 2rem;
+  line-height: 160%;
+  font-weight: bold;
+}
